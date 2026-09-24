@@ -1,0 +1,85 @@
+{
+  "movies": [
+    {
+      "title": "Inception",
+      "director": "Christopher Nolan",
+      "releaseYear": 2010,
+      "genre": "Sci-Fi",
+      "rating": "15.9",
+      "id": "m101"
+    },
+    {
+      "title": "Interstellar",
+      "director": "Christopher Nolan",
+      "releaseYear": 2014,
+      "genre": "Sci-Fi",
+      "rating": "9",
+      "id": "m102"
+    },
+    {
+      "id": "m103",
+      "title": "The Dark Knight",
+      "director": "Christopher Nolan",
+      "genre": "Action",
+      "releaseYear": 2008,
+      "rating": 9
+    },
+    {
+      "id": "m104",
+      "title": "Avatar",
+      "director": "James Cameron",
+      "genre": "Fantasy",
+      "releaseYear": 2009,
+      "rating": 7.8
+    },
+    {
+      "id": "m105",
+      "title": "Titanic",
+      "director": "James Cameron",
+      "genre": "Romance",
+      "releaseYear": 1997,
+      "rating": 7.9
+    },
+    {
+      "id": "m106",
+      "title": "3 Idiots",
+      "director": "Rajkumar Hirani",
+      "genre": "Comedy",
+      "releaseYear": 2009,
+      "rating": 8.4
+    },
+    {
+      "id": "m107",
+      "title": "Dangal",
+      "director": "Nitesh Tiwari",
+      "genre": "Drama",
+      "releaseYear": 2016,
+      "rating": 8.3
+    },
+    {
+      "id": "m108",
+      "title": "KGF Chapter 1",
+      "director": "Prashanth Neel",
+      "genre": "Action",
+      "releaseYear": 2018,
+      "rating": 8.2
+    },
+    {
+      "title": "RRR",
+      "director": "S. S. Rajamouli",
+      "releaseYear": 2022,
+      "genre": "Action",
+      "rating": "9.8",
+      "id": "m109"
+    },
+    {
+      "title": "Housefull 5",
+      "director": "Rohit shetty",
+      "releaseYear": "2022",
+      "genre": "Comedy",
+      "rating": "10",
+      "id": "1hja_oT2X3E"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
