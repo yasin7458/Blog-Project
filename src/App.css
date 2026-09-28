@@ -2,167 +2,155 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace;
 }
 
-.movie-page {
-  min-height: 100vh;
-  position: relative;
+body {
+  font-family: Arial, sans-serif;
   overflow: hidden;
 }
 
-.main-title {
-  color: #252525;
-  font-size: 38px;
-  font-weight: 800;
+.blog-page {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blog-header {
+  padding: 15px;
+  font-family: monospace;
+  height: 50px;
+  align-items: center;
+  text-align: center;
+  color: #243B55;
+}
+
+.blog-header h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.blog-page .container-fluid {
+  height: 92vh;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+
+.blog-page .row {
+  height: 100%;
+}
+
+.blog-page .col-lg-4 {
+  height: 100%;
+  overflow: hidden;
+}
+
+.blog-form {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100%;
+  background: linear-gradient(135deg, #F8FBFF 0%, #EEF5FF 100%);
+  border: 1px solid #D9E7F7;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 15px 18px;
+  overflow: hidden;
+}
+
+.add-blog {
+  background: linear-gradient(135deg, #4F8FD9 0%, #3678C9 100%);
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #243B55;
+  margin-bottom: 12px;
+}
+
+.blog-form .form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.blog-form .form-control,
+.blog-form .form-select {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 1px solid #D5E2F0;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  color: #243B55;
+}
+
+.blog-form button {
+  font-size: 14px;
+  padding: 9px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.blog-page .col-lg-8 {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 15px;
+}
+
+
+.blog-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FBFF 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid  #F8FBFF;
+  box-shadow: 0 4px 12px rgba(54, 120, 201, 0.08);
+}
+
+.blog-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #243B55;
   margin-bottom: 8px;
 }
 
-.main-subtitle {
-  color: #777;
-  font-size: 15px;
+.blog-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #606A78;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
 }
 
-.movie-card {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(110deg,
-      #fbed96 0%,
-      #abecd6 100%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 15px;
-  box-shadow:
-    0 12px 30px rgba(116, 83, 55, 0.18);
-  transition: 0.35s ease;
-  z-index: 2;
-}
-
-.genre {
-  padding: 6px 13px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.42);
-  color: #54204b;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.movie-title {
-  color: #241c24;
-  font-size: 23px;
-  font-weight: 800;
-  letter-spacing: -0.4px;
-}
-
-.rating {
-  padding: 7px 11px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.42);
-  color: #513b00;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(8px);
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.movie-details {
-  margin-top: 10px;
-}
-
-.detail-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.detail-row span {
-  color: rgba(45, 30, 40, 0.65);
-  font-size: 13px;
-}
-
-.detail-row strong {
-  max-width: 65%;
-  color: #2b2029;
-  font-size: 13px;
-  text-align: right;
-}
-
-.detail-row small {
-  color: rgba(45, 30, 40, 0.55);
-  font-size: 11px;
-}
-
-.detail-row.last {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.btn1 {
-  background: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
-  margin: 2px;
-  padding: 10px 20px;
+.blog-card button {
+  padding: 8px 15px;
   text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
+  font-size: 12px;
+  font-family: monospace;
+  color: #FFFFFF;
+  border-radius: 8px;
   outline: none;
   border: none;
 }
 
-.edit {
-  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
-  color: black;
+.Edit-Btn {
+  background: linear-gradient(135deg, #4F8FD9 0%, #3678C9 100%);
+  color: #FFFFFF;
 }
 
-.text-center.my-5 {
-  width: 500px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 20px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(10px);
-}
-
-.text-center.my-5 h2 {
-  margin-bottom: 25px;
-  font-weight: 700;
-  color: #263238;
-}
-
-.text-center.my-5 form input {
-  width: 100%;
-  padding:8px 16px;
-  margin-bottom: 15px;
-  border: 1px solid #d8d8d8;
-  border-radius: 10px;
-  outline: none;
-  font-size: 15px;
-  background: #ffffff;
-  transition: 0.3s;
-}
-
-.text-center.my-5 form button {
-  width: 100%;
-  padding: 13px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(110deg,
-      #8fd8ca,
-      #a9d9d0,
-      #efaaaa);
-  color: #263238;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+.Delete-Btn {
+  background: linear-gradient(135deg, #F08080 0%, #E05252 100%);
+  color: #FFFFFF;
 }

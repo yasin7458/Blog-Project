@@ -2,184 +2,186 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-
+  const [blogs, setBlogs] = useState([]);
   const [title, setTitle] = useState("");
-  const [director, setDirector] = useState("");
-  const [releaseYear, setReleaseYear] = useState("");
-  const [genre, setGenre] = useState("");
-  const [rating, setRating] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
+  const [date, setDate] = useState("");
   const [isadd, setIsAdd] = useState(true);
   const [Update, setUpdate] = useState(null);
 
-  //=================
-  //   READ LOGIC
-  //=================
 
   useEffect(() => {
-    fetch("http://localhost:3000/movies", {
+    fetch("http://localhost:3000/blogs", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
-      },
+      }
     })
       .then((res) => res.json())
-      .then((data) => setMovies(data));
+      .then((data) => setBlogs(data));
   }, []);
-
 
   const handleSubmit = () => {
 
-    const movieData = {
-      title, director, releaseYear, genre, rating
-    };
+    const blogData = { title, description, category, image, date };
 
     if (isadd) {
-
-      // =======================
-      //      CREATE LOGIC
-      // =======================
-
-      fetch("http://localhost:3000/movies", {
+      fetch("http://localhost:3000/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(movieData)
-      })
+        body: JSON.stringify(blogData)
+      });
 
     } else {
-
-      // =======================
-      //      UPDATE LOGIC
-      // =======================
-
-      fetch(`http://localhost:3000/movies/${Update}`, {
+      fetch(`http://localhost:3000/blogs/${Update}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(movieData)
-      })
-
+        body: JSON.stringify(blogData)
+      });
     }
   };
 
-  //===================
-  //   Update BUTTON
-  //===================
-  const handleEdit = (movie) => {
+  const handleEdit = (blog) => {
     setIsAdd(false);
-    setUpdate(movie.id);
-    setTitle(movie.title);
-    setDirector(movie.director);
-    setReleaseYear(movie.releaseYear);
-    setGenre(movie.genre);
-    setRating(movie.rating);
+    setUpdate(blog.id);
+    setTitle(blog.title);
+    setDescription(blog.description);
+    setCategory(blog.category);
+    setImage(blog.image);
+    setDate(blog.date);
   };
 
-  //=====================
-  //    DELETE
-  //=====================
-
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/movies/${id}`, {
+    fetch(`http://localhost:3000/blogs/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
       }
     }).then(() => {
-      setMovies(movies.filter((movie) => movie.id !== id));
+      setBlogs(blogs.filter((blog) => blog.id !== id));
     });
   };
 
   return (
-    <>
-      <div className="text-center my-5">
-        <h2>{isadd ? "Add New Movie" : "Edit Movie"}</h2>
+    <div className="blog-page">
 
-        <form onSubmit={handleSubmit}>
-
-          <input type="text" placeholder="Movie Name" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <br />
-
-          <input type="text" placeholder="Director" value={director} onChange={(e) => setDirector(e.target.value)} />
-          <br />
-
-          <input type="number" placeholder="Release Year" value={releaseYear} onChange={(e) => setReleaseYear(e.target.value)} />
-          <br />
-
-          <input type="text" placeholder="Genre" value={genre} onChange={(e) => setGenre(e.target.value)} />
-          <br />
-
-          <input type="number" placeholder="Rating" value={rating} onChange={(e) => setRating(e.target.value)} />
-          <br />
-
-          <button type="submit">{isadd ? "Add" : "Edit"}</button>
-
-        </form>
+      <div className="blog-header ">
+        <h2>Blog Management System</h2>
       </div>
 
-      <div className="movie-page py-5">
+      <div className="container-fluid px-lg-4">
 
-        <div className="container">
+        <div className="row g-3">
 
-          <div className="text-center mb-5">
-            <h1 className="main-title">
-              Movies Collection
-            </h1>
+          <div className="col-lg-4 col-md-12">
 
-            <p className="main-subtitle">
-              Discover your favorite movies
-            </p>
-          </div>
+            <div className="blog-form">
 
-          <div className="row g-4">
+              <h3 className="form-title"> {isadd ? "Add New Blog" : "Edit Blog"} </h3>
 
-            {movies.map((element, index) => (
+              <form onSubmit={handleSubmit}>
 
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12" key={index} >
-
-                <div className="movie-card h-100 p-4">
-
-                  <div className="d-flex justify-content-between align-items-start mb-4">
-
-                    <div>
-                      <span className="genre"> {element.genre} </span>
-                      <h4 className="movie-title mt-3 mb-0"> {element.title} </h4>
-                    </div>
-                    <div className="rating">⭐ {element.rating} </div>
-                  </div>
-
-                  <div className="movie-details">
-
-                    <div className="detail-row">
-                      <span>Director</span>
-                      <strong> {element.director} </strong>
-                    </div>
-
-                    <div className="detail-row">
-                      <span>Release Year</span>
-                      <strong> {element.releaseYear} </strong>
-                    </div>
-
-                    <div className="detail-row last">
-                      <span>Movie ID</span>
-                      <small> {index + 1} </small>
-                    </div>
-
-                    <div className="btn-section d-flex justify-content-between mt-3">
-                      <button className="btn1" onClick={() => handleDelete(element.id)}>Delete </button>
-                      <button className="btn1 edit" onClick={() => handleEdit(element)}> Edit </button>
-                    </div>
-                  </div>
+                <div className="mb-2">
+                  <label className="form-label"> Blog Title </label>
+                  <input type="text" className="form-control" placeholder="Enter blog title" value={title} onChange={(e) => setTitle(e.target.value)} required />
                 </div>
-              </div>
-            ))}
+
+                <div className="mb-2">
+                  <label className="form-label"> Description </label>
+                  <textarea className="form-control" rows="3" placeholder="Enter blog description" value={description} onChange={(e) => setDescription(e.target.value)} required ></textarea>
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label"> Category </label>
+
+                  <select className="form-select" value={category} onChange={(e) => setCategory(e.target.value)} required >
+                    <option value="">Select Category</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Food">Food</option>
+                    <option value="Education">Education</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Environment">Environment</option>
+                  </select>
+                </div>
+
+                <div className="mb-2">
+                  <label className="form-label"> Image URL </label>
+                  <input type="url" className="form-control" placeholder="Enter image URL" value={image} onChange={(e) => setImage(e.target.value)} required />
+                </div>
+
+                <div className="mb-3">
+                  <label className="form-label"> Publish Date </label>
+                  <input type="date" className="form-control" value={date} onChange={(e) => setDate(e.target.value)} required />
+                </div>
+
+                <button type="submit" className="add-blog w-100" > {isadd ? "Add Blog" : "Update Blog"} </button>
+              </form>
+
+            </div>
           </div>
+
+          <div className="col-lg-8 col-md-12">
+
+            <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2"></div>
+
+            <div className="row g-4">
+
+              {blogs.map((element) => (
+
+                <div className="col-xl-6 col-md-6 col-sm-12" key={element.id}>
+
+                  <div className="blog-card h-100">
+
+                    <img src={element.image} className="blog-image" alt={element.title} />
+
+                    <div className="p-3" style={{ background: "linear-gradient(136deg, #ECE9E6 0%, #ffffff 100%)" }}>
+
+                      <div className="d-flex justify-content-between align-items-center gap-2 mb-3">
+
+                        <span className="badge bg-secondary"> {element.category} </span>
+
+                        <small className="text-secondary"> {element.date} </small>
+
+                      </div>
+
+                      <h5 className="blog-title"> {element.title} </h5>
+
+                      <p className="blog-description"> {element.description} </p>
+
+                      <div className="d-flex gap-2 mt-3">
+
+                        <button className="Edit-Btn" onClick={() => handleEdit(element)} > Edit </button>
+
+                        <button className="Delete-Btn" onClick={() => handleDelete(element.id)}> Delete </button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              ))};
+            </div>
+
+          </div>
+
         </div>
+
       </div>
-    </>
+
+    </div>
   );
 }
 

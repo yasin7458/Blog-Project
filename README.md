@@ -1,8 +1,9 @@
-# 🎬 Movie Collection CRUD App
 
-A simple and responsive **Movie Collection CRUD Application** built using **React.js** and **JSON Server**.
+# 📝 Blog Management App
 
-This project allows users to **add, view, edit, and delete movie details** using CRUD operations.
+A simple and responsive **Blog Management Application** built using **React.js**.
+
+This project allows users to create, view, and manage blog posts through a simple and user-friendly interface.
 
 ---
 
@@ -13,26 +14,23 @@ This project allows users to **add, view, edit, and delete movie details** using
 * Bootstrap
 * JavaScript
 * React.js
-* JSON Server
-* Fetch API
 
 ---
 
 ## ✨ Features
 
-* View all movies
-* Add a new movie
-* Edit movie details
-* Delete a movie
-* Movie Title
-* Director
-* Release Year
-* Genre
-* Rating
-* Responsive movie cards
-* JSON Server for storing movie data
-* REST API integration
-* CRUD operations
+* Create a new blog post
+* View all blog posts
+* Blog creation form
+* Blog title and content
+* Responsive blog cards
+* Fixed blog form layout
+* Attractive gradient background
+* User-friendly interface
+* Dynamic blog rendering
+* React state management
+* Event handling
+* Conditional rendering
 
 ---
 
@@ -45,160 +43,131 @@ User
   ↓
 React Application
   ↓
-Movie Form
+Blog Form
   ↓
-Add / Edit Movie
+Enter Blog Details
   ↓
-Fetch API
-  ↓
-JSON Server
-  ↓
-db.json
-  ↓
-Movie Data
+Create Blog
   ↓
 React State
   ↓
-Movie Cards
+Blog Data
+  ↓
+Blog Cards
+  ↓
+Display Blog Collection
 ```
 
 ---
 
-## 1️⃣ GET – Display Movies
+## 1️⃣ Blog Form
 
-When the application starts, React uses `useEffect()` to send a **GET request** to JSON Server.
+The blog form allows users to enter the required information for creating a blog post.
+
+The user enters the blog details and submits the form.
 
 ```text
-React
-  ↓
-GET Request
-  ↓
-JSON Server
-  ↓
-Movies Data
-  ↓
+Blog Form
+    ↓
+Enter Blog Details
+    ↓
+Form Submission
+    ↓
+Handle Submit
+    ↓
+Blog Data
+    ↓
 React State
-  ↓
-Movie Cards
 ```
 
-All movie data is fetched from JSON Server and displayed in the movie cards.
+The form is designed to remain fixed on the left side of the screen, while the blog collection is displayed on the right side.
 
 ---
 
-## 2️⃣ CREATE – Add Movie
+## 2️⃣ CREATE – Add Blog
 
-The user enters the following movie details:
-
-* Movie Title
-* Director
-* Release Year
-* Genre
-* Rating
-
-Then clicks the **Add** button.
+When the user enters the blog details and clicks the **Create Blog** button, a new blog post is created.
 
 ```text
-Movie Form
+Blog Form
     ↓
-movieData
+Blog Title
     ↓
-POST Request
+Blog Content
     ↓
-JSON Server
+Create Blog Button
     ↓
-db.json
+Handle Submit
     ↓
-New Movie Added
+Update React State
+    ↓
+New Blog Added
+    ↓
+Display Blog Card
 ```
 
-The new movie is stored in the JSON Server database.
+The new blog is added to the blog collection and displayed dynamically using React.
 
 ---
 
-## 3️⃣ UPDATE – Edit Movie
+## 3️⃣ VIEW – Display Blogs
 
-When the user clicks the **Edit** button, the selected movie data is loaded into the form.
+The application displays the created blog posts in the form of responsive cards.
 
 ```text
-Movie Card
+React State
     ↓
-Edit Button
+Blog Data
     ↓
-handleEdit()
+map()
     ↓
-Movie Data → Form
+Blog Cards
     ↓
-User Changes Data
-    ↓
-PUT Request
-    ↓
-JSON Server
-    ↓
-Movie Updated
+Display Blog Collection
 ```
 
-The selected movie details are updated using the **PUT** method.
+The blog collection displays the available blog posts with their respective details.
 
 ---
 
-## 4️⃣ DELETE – Delete Movie
+# 🔁 Blog Operations
 
-When the user clicks the **Delete** button:
-
-```text
-Delete Button
-    ↓
-Movie ID
-    ↓
-DELETE Request
-    ↓
-JSON Server
-    ↓
-Movie Removed
-```
-
-The selected movie is removed from the JSON Server database and movie list.
-
----
-
-# 🔁 CRUD Operations
-
-| Operation | HTTP Method | API Endpoint  |
-| --------- | ----------- | ------------- |
-| Create    | POST        | `/movies`     |
-| Read      | GET         | `/movies`     |
-| Update    | PUT         | `/movies/:id` |
-| Delete    | DELETE      | `/movies/:id` |
+| Operation | Description |
+| --------- | ----------- |
+| Create | Create a new blog post |
+| Read | Display blog posts |
+| State Management | Manage blog data using React state |
+| Rendering | Display dynamic blog cards |
 
 ---
 
 # 🖥️ Project Output / Screenshots
 
-## 📝 Movie Form
+## 📝 Blog Creation Form
 
-The form is used to enter movie information such as title, director, release year, genre, and rating.
+The form is used to enter blog information such as the blog title and content.
 
-![Movie Form](src/assets/form.png)
+![Blog Form](src/assets/form.png)
 
 ---
 
-## 🎬 Movie Collection
+## 📚 Blog Collection
 
-The movie collection displays all movies in responsive cards with their details, rating, Edit button, and Delete button.
+The blog collection displays the created blog posts in a card layout.
 
-![Movie Collection](src/assets/collection.png)
+![Blog Collection](src/assets/collection.png)
 
 ---
 
 # 📸 Project Screenshots
 
-The project screenshots are stored inside the `assets` folder.
+The project screenshots are stored inside the `src/assets` folder.
 
 ```text
-assets/
-├── form.png
-└── collection.png
+src/
+└── assets/
+    ├── form.png
+    └── collection.png
 ```
 
 ---
@@ -207,22 +176,18 @@ assets/
 
 ## Project Explanation Video
 
-In this video, I explain the complete **Movie Collection CRUD Project**, including:
+In this video, I explain the complete **Blog Management Project**, including:
 
 * Project introduction
 * React application structure
-* `useState`
-* `useEffect`
-* JSON Server
-* Fetch API
-* GET operation
-* POST operation
-* PUT operation
-* DELETE operation
-* Add Movie
-* Edit Movie
-* Delete Movie
-* Movie Collection
+* Blog form
+* useState
+* Event Handling
+* Form Handling
+* Conditional Rendering
+* Creating blog posts
+* Displaying blog cards
+* Dynamic rendering using map()
 * Project output
 
 ### ▶️ Video Link
@@ -244,7 +209,7 @@ git clone YOUR_GITHUB_REPOSITORY_LINK
 ## 2. Open Project
 
 ```bash
-cd movie-crud
+cd blog-project
 ```
 
 ## 3. Install Dependencies
@@ -253,23 +218,7 @@ cd movie-crud
 npm install
 ```
 
-## 4. Start JSON Server
-
-Run the following command:
-
-```bash
-npx json-server --watch db.json
-```
-
-The JSON Server API will run at:
-
-```text
-http://localhost:3000/movies
-```
-
-## 5. Start React Application
-
-Open another terminal and run:
+## 4. Start React Application
 
 ```bash
 npm run dev
@@ -282,18 +231,20 @@ Then open the local URL provided by Vite in your browser.
 # 📂 Project Structure
 
 ```text
-movie-crud/
+blog-project/
 │
 ├── src/
+│   ├── assets/
+│   │   ├── form.png
+│   │   └── collection.png
+│   │
 │   ├── App.jsx
 │   ├── App.css
 │   └── main.jsx
 │
-├── assets/
-│   ├── form.png
-│   └── collection.png
+├── public/
 │
-├── db.json
+├── index.html
 ├── package.json
 ├── package-lock.json
 └── README.md
@@ -303,79 +254,47 @@ movie-crud/
 
 # 🧠 React Concepts Used
 
-* `useState`
-* `useEffect`
+* useState
 * Event Handling
 * Form Handling
 * Conditional Rendering
-* `map()`
-* `filter()`
-* Fetch API
-* REST API
-* CRUD Operations
-* JSON Server
+* map()
+* Array Operations
 * State Management
+* Component-Based Architecture
+* Dynamic Rendering
+* JSX
 
 ---
 
-# 📡 API Integration
+# 🎨 UI Design
 
-The project uses **JSON Server** as a local REST API.
+The project includes a simple and responsive user interface with:
 
-### API URL
+* Fixed blog creation form on the left side
+* Blog collection on the right side
+* Gradient background
+* Responsive blog cards
+* Simple and clean layout
+* User-friendly form design
 
-```text
-http://localhost:3000/movies
-```
-
-### GET
-
-Used to fetch all movies.
-
-```text
-GET /movies
-```
-
-### POST
-
-Used to add a new movie.
-
-```text
-POST /movies
-```
-
-### PUT
-
-Used to update an existing movie.
-
-```text
-PUT /movies/:id
-```
-
-### DELETE
-
-Used to delete a movie.
-
-```text
-DELETE /movies/:id
-```
+The layout is designed to display the form and blog collection within the available screen space.
 
 ---
 
 # 🎯 Project Purpose
 
-The main purpose of this project is to understand how **React.js communicates with a REST API** and how CRUD operations are performed in a web application.
+The main purpose of this project is to understand how **React.js manages dynamic data and updates the user interface** using state and event handling.
 
 This project helped me improve my practical knowledge of:
 
 * React.js
-* API Integration
-* JSON Server
-* Fetch API
-* Form Handling
 * State Management
-* CRUD Operations
-* REST API
+* Form Handling
+* Event Handling
+* Dynamic Rendering
+* CSS Styling
+* Responsive Web Design
 
 ---
 
@@ -383,16 +302,16 @@ This project helped me improve my practical knowledge of:
 
 Through this project, I learned how to:
 
-* Create a React application
-* Manage data using `useState`
-* Fetch API data using `useEffect`
-* Send GET, POST, PUT, and DELETE requests
-* Connect React with JSON Server
-* Create and handle forms
-* Display dynamic data using `map()`
-* Delete data using `filter()`
-* Update existing data
-* Build a responsive movie collection interface
+* Create a React application using Vite
+* Manage blog data using useState
+* Handle form inputs in React
+* Create and display blog posts
+* Render dynamic data using map()
+* Update the user interface using React state
+* Design responsive layouts using CSS
+* Create a fixed form layout
+* Apply gradient backgrounds
+* Build a simple and user-friendly blog interface
 
 ---
 

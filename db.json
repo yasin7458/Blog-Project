@@ -1,84 +1,84 @@
 {
-  "movies": [
+  "blogs": [
     {
-      "title": "Inception",
-      "director": "Christopher Nolan",
-      "releaseYear": 2010,
-      "genre": "Sci-Fi",
-      "rating": "15.9",
-      "id": "m101"
+      "title": "Introduction to React Js",
+      "description": "Learn the basics of React JS, components, props, state and how to build interactive user interfaces.",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+      "date": "2025-09-10",
+      "id": "1"
     },
     {
-      "title": "Interstellar",
-      "director": "Christopher Nolan",
-      "releaseYear": 2014,
-      "genre": "Sci-Fi",
-      "rating": "9",
-      "id": "m102"
+      "id": "2",
+      "title": "Top 5 Places to Visit in Gujarat",
+      "description": "Explore the beautiful destinations of Gujarat including Rann of Kutch, Somnath, Dwarka and Gir National Park.",
+      "category": "Travel",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+      "date": "2026-09-11"
     },
     {
-      "id": "m103",
-      "title": "The Dark Knight",
-      "director": "Christopher Nolan",
-      "genre": "Action",
-      "releaseYear": 2008,
-      "rating": 9
+      "id": "3",
+      "title": "Healthy Food for Everyday Life",
+      "description": "Discover simple and healthy food habits, nutritious ingredients and easy meals for your daily routine.",
+      "category": "Food",
+      "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
+      "date": "2026-09-12"
     },
     {
-      "id": "m104",
-      "title": "Avatar",
-      "director": "James Cameron",
-      "genre": "Fantasy",
-      "releaseYear": 2009,
-      "rating": 7.8
+      "id": "4",
+      "title": "How to Prepare for a Job Interview",
+      "description": "Learn useful interview preparation tips, communication skills and ways to answer common interview questions.",
+      "category": "Education",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173",
+      "date": "2026-09-13"
     },
     {
-      "id": "m105",
-      "title": "Titanic",
-      "director": "James Cameron",
-      "genre": "Romance",
-      "releaseYear": 1997,
-      "rating": 7.9
+      "id": "5",
+      "title": "The Future of Artificial Intelligence",
+      "description": "Understand how artificial intelligence is changing technology, business, education and our everyday lives.",
+      "category": "Technology",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      "date": "2026-09-14"
     },
     {
-      "id": "m106",
-      "title": "3 Idiots",
-      "director": "Rajkumar Hirani",
-      "genre": "Comedy",
-      "releaseYear": 2009,
-      "rating": 8.4
+      "id": "6",
+      "title": "Best Fitness Habits for Beginners",
+      "description": "Explore beginner-friendly fitness habits, daily movement, healthy routines and ways to stay active.",
+      "category": "Fitness",
+      "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+      "date": "2026-09-15"
     },
     {
-      "id": "m107",
-      "title": "Dangal",
-      "director": "Nitesh Tiwari",
-      "genre": "Drama",
-      "releaseYear": 2016,
-      "rating": 8.3
+      "id": "7",
+      "title": "A Guide to Personal Finance",
+      "description": "Learn the basics of budgeting, saving money, managing expenses and developing responsible financial habits.",
+      "category": "Finance",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "date": "2026-09-16"
     },
     {
-      "id": "m108",
-      "title": "KGF Chapter 1",
-      "director": "Prashanth Neel",
-      "genre": "Action",
-      "releaseYear": 2018,
-      "rating": 8.2
+      "id": "8",
+      "title": "Exploring the World of Photography",
+      "description": "Discover photography basics, composition, lighting and simple techniques to capture memorable moments.",
+      "category": "Photography",
+      "image": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d",
+      "date": "2026-09-17"
     },
     {
-      "title": "RRR",
-      "director": "S. S. Rajamouli",
-      "releaseYear": 2022,
-      "genre": "Action",
-      "rating": "9.8",
-      "id": "m109"
+      "id": "9",
+      "title": "Latest Fashion Trends and Styling",
+      "description": "Explore everyday fashion ideas, outfit combinations and simple styling tips for different occasions.",
+      "category": "Fashion",
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b",
+      "date": "2026-09-18"
     },
     {
-      "title": "Housefull 5",
-      "director": "Rohit shetty",
-      "releaseYear": "2022",
-      "genre": "Comedy",
-      "rating": "10",
-      "id": "1hja_oT2X3E"
+      "id": "10",
+      "title": "The Importance of Nature and Environment",
+      "description": "Learn about environmental protection, sustainability, reducing waste and simple ways to protect our planet.",
+      "category": "Environment",
+      "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      "date": "2026-09-19"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
