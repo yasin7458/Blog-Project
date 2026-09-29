@@ -192,7 +192,8 @@ In this video, I explain the complete **Blog Management Project**, including:
 
 ### ▶️ Video Link
 
-[Watch Project Explanation Video](https://drive.google.com/file/d/1LgBr_Rj09RlotZDT8Ym26W1fU6GQew0X/view?usp=drivesdk)
+[Watch Project Explanation Video](https://drive.google.com/file/d/1eMgFnE2LREctWnuVPRheoRBFyQNvZv6t/view?usp=sharing
+)
 
 > Replace `YOUR_VIDEO_LINK_HERE` with your actual YouTube or Google Drive video link.
 
